@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fermat.domain.Criteria;
 import com.fermat.domain.NoticeBoardVO;
+import com.fermat.domain.SearchCriteria;
 
 public interface NoticeBoardService {
 	
@@ -18,5 +19,11 @@ public interface NoticeBoardService {
 	public List<NoticeBoardVO> listAll() throws Exception;
 	
 	public List<NoticeBoardVO> listCriteria(Criteria cri) throws Exception;
+	
+	public int listCountCriteria(Criteria cri) throws Exception;
+	
+	public List<NoticeBoardVO> listSearchCriteria(SearchCriteria cri) throws Exception;
+	
+	public int listSearchCount(SearchCriteria cri) throws Exception;
 
 }

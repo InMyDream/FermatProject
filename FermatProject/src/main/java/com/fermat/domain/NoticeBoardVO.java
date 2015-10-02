@@ -1,5 +1,6 @@
 package com.fermat.domain;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class NoticeBoardVO {
@@ -10,6 +11,10 @@ public class NoticeBoardVO {
 	private String writer;
 	private Date regdate;
 	private int viewcnt;
+	private int replycnt;
+	
+	private String[] files;
+	
 	public Integer getBno() {
 		return bno;
 	}
@@ -46,11 +51,28 @@ public class NoticeBoardVO {
 	public void setViewcnt(int viewcnt) {
 		this.viewcnt = viewcnt;
 	}
+	
+	public int getReplycnt() {
+		return replycnt;
+	}
+	public void setReplycnt(int replycnt) {
+		this.replycnt = replycnt;
+	}
+	public String[] getFiles() {
+		return files;
+	}
+	public void setFiles(String[] files) {
+		this.files = files;
+	}
 	@Override
 	public String toString() {
 		return "NoticeBoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer
-				+ ", regdate=" + regdate + ", viewcnt=" + viewcnt + "]";
+				+ ", regdate=" + regdate + ", viewcnt=" + viewcnt + ", replycnt=" + replycnt + ", files="
+				+ Arrays.toString(files) + "]";
 	}
+	
+	
+	
 	
 	
 }
